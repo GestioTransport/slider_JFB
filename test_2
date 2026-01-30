@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title> Infinite autoplay carousel</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+
+</head>
+
+<style>
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    align-items: center;
+    background: black;
+    display: flex;
+    height: 100vh;
+    justify-content: center;    
+
+}
+
+:root {
+    --slide-width: 200px;  
+    --total-slides: 10;
+  
+}
+  
+.slider {
+    background: pr;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+    height: 120px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.slider::before, .slider::after {
+    background: linear-gradient(to right, black 0%, rgba(255, 255, 255, 0) 100%);
+    content: "";
+    height: 120px;
+    position: absolute;
+    width: 200px;
+    z-index: 2;
+}
+
+.slider::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+
+.slider::before {
+    left: 0;
+    top: 0;
+}
+
+.slider .slide-track {
+    animation: scroll 50s linear infinite;
+    display: flex;
+    width: calc(var(--slide-width) * var(--total-slides) * 2);
+
+}
+
+.slider .slide-track:hover {
+    animation-play-state: paused;
+}
+  
+.slide {
+    width: var(--slide-width);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+
+.slide img {
+    height: 100px;
+    width: auto;
+    object-fit: contain;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+            calc(-1 * var(--slide-width) * var(--total-slides))
+      );
+    }
+}
+</style>
+
+<body>
+
+    <!-- partial:index.partial.html -->
+    <div class="slider">
+      <div class="slide-track">
+        <div class="slide">
+          <img src="gene_2.png">
+        </div>
+        <div class="slide">
+          <img src="ATM.PNG" alt="" />
+        </div>
+        <div class="slide">
+          <img src="CGIM_lLetres_blanc.png" height="100" alt="" />
+        </div>
+        <div class="slide">
+          <img src="AJBCN_Sign_Com_Blanc_Transparent.png" alt="" />
+        </div>
+        <div class="slide">
+          <img src="Logotips operadors-03.png" height="100" alt="" />
+        </div>
+      </div>
+    </div>
+    <!-- partial -->
+  
+  </body>
+  
+
+  </html>
+
+
+
+
+
+
+
+
+
+
+
+

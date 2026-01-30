@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title> Infinite autoplay carousel</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+
+</head>
+<style>
+  body {
+    align-items: center;
+    background: black;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    overflow: hidden;
+
+  }
+
+  @-webkit-keyframes scroll {
+    0% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+
+    100% {
+      -webkit-transform: translateX(calc(-250px * 29));
+      transform: translateX(calc(-250px * 29));
+    }
+  }
+
+  @keyframes scroll {
+    0% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+
+    100% {
+      -webkit-transform: translateX(calc(-250px * 29));
+      transform: translateX(calc(-250px * 29));
+    }
+  }
+
+  .slider {
+    background: pr;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+    height: 80px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 4000px;
+
+  }
+
+  .slider::before,
+  .slider::after {
+    background: linear-gradient(to right, black 0%, rgba(255, 255, 255, 0) 100%);
+    content: "";
+    height: 80px;
+    position: absolute;
+    width: 200px;
+    z-index: 2;
+  }
+
+  .slider::after {
+    right: 0;
+    top: 0;
+    -webkit-transform: rotateZ(180deg);
+    transform: rotateZ(180deg);
+  }
+
+  .slider::before {
+    left: 0;
+    top: 0;
+  }
+
+  .slider .slide-track {
+   -webkit-animation: scroll 65s linear infinite;
+    animation: scroll 65s linear infinite;
+    display: flex;
+    width: calc(250px * 58);
+  }
+
+  .slider .slide {
+    height: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+</style>
+
+<body>
+
+  <!-- partial:index.partial.html -->
+  <div class="slider">
+    <div class="slide-track">
+      <div class="slide">
+        <img src="Logotips operadors-03.png" height="100" alt="" />
+      </div>
+      <div class="slide">
+        <img src="Logotips operadors-04.png" height="100" alt="" />
+      </div>
+      <div class="slide">
+        <img src="Logotips operadors-05.png" height="100" alt="" />
+      </div>
+      <div class="slide">
+        <img src="Logotips operadors-06.png" height="100" alt="" />
+      </div>
+      <div class="slide">
+        <img src="Logotips operadors-07.png" height="100" alt="" />
+      </div>
+      <div class="slide">
+        <img src="Logotips operadors-08.png" height="100" alt="" />
+      </div>
+      <div class="slide">
+        <img src="Logotips operadors-09.png" height="100" alt="" />
+      </div>
+      <div class="slide">
+        <img src="Logotips operadors-10.png" height="100" alt="" />
+      </div>
+      <div class="slide">
+        <img src="Logotips operadors-11.png" height="100" alt="" />
+      </div>
+      <div class="slide">
+        <img src="Logotips operadors-12.png" height="100" alt="" />
+      </div>
+      <div class="slide">
+        <img src="Logotips operadors-13.png" height="100" alt="" />
+      </div>
+      <div class="slide">
+        <img src="Logotips operadors-14.png" height="100" alt="" />
+      </div>
+      <div class="slide">
+        <img src="Logotips operadors-15.png" height="100" alt="" />
+      </div>
+      <div class="slide">
+        <img src="Logotips operadors-16.png" height="100" alt="" />
+      </div>
+      <div class="slide">
+        <img src="Logotips operadors-17.png" height="100" alt="" />
+      </div>
+      <div class="slide">
+        <img src="Logotips operadors-18.png" height="100" alt="" />
+      </div>
+      <div class="slide">
+        <img src="Logotips operadors-19.png" height="100" alt="" />
+      </div>
+      <div class="slide">
+        <img src="Logotips operadors-20.png" height="100" alt="" />
+      </div>
+      <div class="slide">
+        <img src="Logotips operadors-21.png" height="100" alt="" />
+      </div>
+      <div class="slide">
+        <img src="Logotips operadors-22.png" height="100" alt="" />
+      </div>
+      <div class="slide">
+        <img src="Logotips operadors-24.png" height="100" alt="" />
+      </div>
+      <div class="slide">
+        <img src="Logotips operadors-25.png" height="100" alt="" />
+      </div>
+      <div class="slide">
+        <img src="Logotips operadors-26.png" height="100" alt="" />
+      </div>
+      <div class="slide">
+        <img src="Logotips operadors-28.png" height="100" alt="" />
+      </div>
+      <div class="slide">
+        <img src="Logotips operadors-29.png" height="100" alt="" />
+      </div>
+      <div class="slide">
+        <img src="Logotips operadors_2-31.png" height="100" alt="" />
+      </div>
+      <div class="slide">
+        <img src="Logotips operadors_2-32.png" height="100" alt="" />
+      </div>
+      <div class="slide">
+        <img src="Logotips operadors_2-34.png" height="100" alt="" />
+      </div>
+      <div class="slide">
+        <img src="Logotips operadors-31.png" height="100" alt="" />
+      </div>
+      <div class="slide">
+        <img src="Logotips operadors_2-33.png" height="100" alt="" />
+      </div>
+      <div class="slide">
+        <img src="Logotips operadors-03.png" height="100" alt="" />
+      </div>
+      <div class="slide">
+        <img src="Logotips operadors-04.png" height="100" alt="" />
+      </div>
+      <div class="slide">
+        <img src="Logotips operadors-05.png" height="100" alt="" />
+      </div>
+      <div class="slide">
+        <img src="Logotips operadors-06.png" height="100" alt="" />
+      </div>
+      <div class="slide">
+        <img src="Logotips operadors-07.png" height="100" alt="" />
+      </div>
+      <div class="slide">
+        <img src="Logotips operadors-08.png" height="100" alt="" />
+      </div>
+      <div class="slide">
+        <img src="Logotips operadors-09.png" height="100" alt="" />
+      </div>
+      <div class="slide">
+        <img src="Logotips operadors-10.png" height="100" alt="" />
+      </div>
+      <div class="slide">
+        <img src="Logotips operadors-11.png" height="100" alt="" />
+      </div>
+      <div class="slide">
+        <img src="Logotips operadors-12.png" height="100" alt="" />
+      </div>
+      <div class="slide">
+        <img src="Logotips operadors-13.png" height="100" alt="" />
+      </div>
+      <div class="slide">
+        <img src="Logotips operadors-14.png" height="100" alt="" />
+      </div>
+      <div class="slide">
+        <img src="Logotips operadors-15.png" height="100" alt="" />
+      </div>
+      <div class="slide">
+        <img src="Logotips operadors-16.png" height="100" alt="" />
+      </div>
+      <div class="slide">
+        <img src="Logotips operadors-17.png" height="100" alt="" />
+      </div>
+      <div class="slide">
+        <img src="Logotips operadors-18.png" height="100" alt="" />
+      </div>
+      <div class="slide">
+        <img src="Logotips operadors-19.png" height="100" alt="" />
+      </div>
+      <div class="slide">
+        <img src="Logotips operadors-20.png" height="100" alt="" />
+      </div>
+      <div class="slide">
+        <img src="Logotips operadors-21.png" height="100" alt="" />
+      </div>
+      <div class="slide">
+        <img src="Logotips operadors-22.png" height="100" alt="" />
+      </div>
+      <div class="slide">
+        <img src="Logotips operadors-24.png" height="100" alt="" />
+      </div>
+      <div class="slide">
+        <img src="Logotips operadors-25.png" height="100" alt="" />
+      </div>
+      <div class="slide">
+        <img src="Logotips operadors-26.png" height="100" alt="" />
+      </div>
+      <div class="slide">
+        <img src="Logotips operadors-28.png" height="100" alt="" />
+      </div>
+      <div class="slide">
+        <img src="Logotips operadors-29.png" height="100" alt="" />
+      </div>
+      <div class="slide">
+        <img src="Logotips operadors_2-31.png" height="100" alt="" />
+      </div>
+      <div class="slide">
+        <img src="Logotips operadors_2-32.png" height="100" alt="" />
+      </div>
+      <div class="slide">
+        <img src="Logotips operadors_2-34.png" height="100" alt="" />
+      </div>
+      <div class="slide">
+        <img src="Logotips operadors-31.png" height="100" alt="" />
+      </div>
+      <div class="slide">
+        <img src="Logotips operadors_2-33.png" height="100" alt="" />
+      </div>
+    </div>
+  </div>
+  <!-- partial -->
+
+</body>
+
+</html>
+
+
+
+
